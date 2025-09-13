@@ -2,14 +2,31 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Menu, Search, User, Heart } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { useToast } from "@/hooks/use-toast";
 
 const Navigation = () => {
+  const { toast } = useToast();
+  
   const navItems = [
     { name: "Recipes", href: "#recipes" },
     { name: "Cultural Diets", href: "#cultural" },
     { name: "Quick Cook", href: "#quick" },
     { name: "Health Hub", href: "#health" },
   ];
+
+  const handleSearchClick = () => {
+    toast({
+      title: "Search Feature",
+      description: "Connect to Supabase for advanced recipe search functionality!",
+    });
+  };
+
+  const handleLoginClick = () => {
+    toast({
+      title: "Login Feature", 
+      description: "Connect to Supabase to enable user authentication and login!",
+    });
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border shadow-sm">
@@ -39,10 +56,19 @@ const Navigation = () => {
 
           {/* Actions */}
           <div className="flex items-center gap-3">
-            <Button variant="ghost" size="sm" className="hidden sm:flex">
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className="hidden sm:flex"
+              onClick={handleSearchClick}
+            >
               <Search className="h-4 w-4" />
             </Button>
-            <Button variant="ghost" size="sm">
+            <Button 
+              variant="ghost" 
+              size="sm"
+              onClick={handleLoginClick}
+            >
               <User className="h-4 w-4" />
             </Button>
 
