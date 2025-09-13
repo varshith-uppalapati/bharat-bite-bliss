@@ -47,6 +47,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        spice: {
+          turmeric: "hsl(var(--spice-turmeric))",
+          paprika: "hsl(var(--spice-paprika))",
+          mint: "hsl(var(--spice-mint))",
+          cardamom: "hsl(var(--spice-cardamom))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -57,6 +63,15 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        'gradient-warm': 'var(--gradient-warm)',
+        'gradient-fresh': 'var(--gradient-fresh)',
+        'gradient-hero': 'var(--gradient-hero)',
+      },
+      boxShadow: {
+        'warm': 'var(--shadow-warm)',
+        'card': 'var(--shadow-card)',
       },
       borderRadius: {
         lg: "var(--radius)",
